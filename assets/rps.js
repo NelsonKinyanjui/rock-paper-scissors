@@ -57,5 +57,7 @@ function getComputerChoice(){
     playerSelection.toLowerCase() = prompt('Your choice' , '');
     computerSelection = getComputerChoice();
 
-    return 
+    return `${result} ,you picked ${playerSelection} ,computer picked ${computerSelection}.`
  }
+
+ console.log(playRound(playerSelection ,computerSelection));
