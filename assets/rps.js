@@ -16,48 +16,51 @@ function getComputerChoice(){
 
 }
  function playRound (playerSelection , computerSelection){
-    let result = '';
+    
 
-    if (playerSelection === 'rock'){
-        if(computerSelection === 'rock'){
-            result = 'You tie.'
-        }
-        else if (computerSelection === 'paper'){
-            result = 'You lose.'
+        let result = '';
 
-        }
-        else if (computerSelection === 'scissors'){
-            result = 'You win.'
-        }
-    }
-    else if (playerSelection === 'paper'){
-        if(computerSelection === 'rock'){
-            result = 'You win.'
-        }
-        else if (computerSelection === 'paper'){
-            result = 'You tie.'
+        if (playerSelection === 'rock'){
+            if(computerSelection === 'rock'){
+                result = 'You tie.'
+            }
+            else if (computerSelection === 'paper'){
+                result = 'You lose.'
 
+            }
+            else if (computerSelection === 'scissors'){
+                result = 'You win.'
+            }
         }
-        else if (computerSelection === 'scissors'){
-            result = 'You lose.'
-        }
-    }
-    else if (playerSelection === 'scissors'){
-        if(computerSelection === 'rock'){
-            result = 'You lose.'
-        }
-        else if (computerSelection === 'paper'){
-            result = 'You win.'
+            else if (playerSelection === 'paper'){
+                if(computerSelection === 'rock'){
+                    result = 'You win.'
+                }
+                else if (computerSelection === 'paper'){
+                    result = 'You tie.'
 
+                }
+                else if (computerSelection === 'scissors'){
+                    result = 'You lose.'
+                }
+            }
+        else if (playerSelection === 'scissors'){
+            if(computerSelection === 'rock'){
+                result = 'You lose.'
+            }
+            else if (computerSelection === 'paper'){
+                result = 'You win.'
+
+            }
+            else if (computerSelection === 'scissors'){
+                result = 'You tie.'
+            }
         }
-        else if (computerSelection === 'scissors'){
-            result = 'You tie.'
-        }
-    }
-    playerSelection.toLowerCase() = prompt('Your choice' , '');
-    computerSelection = getComputerChoice();
+  
 
     return `${result} ,you picked ${playerSelection} ,computer picked ${computerSelection}.`
  }
+ const  playerSelection  = prompt('Your choice' , '');
+ const computerSelection = getComputerChoice();
 
  console.log(playRound(playerSelection ,computerSelection));
