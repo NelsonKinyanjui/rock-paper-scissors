@@ -15,7 +15,10 @@ function getComputerChoice(){
 }
 
 }
- function playRound (playerSelection , computerSelection){
+ 
+
+ function playGame(){
+    function playRound (playerSelection , computerSelection){
     
 
         let result = '';
@@ -64,3 +67,4 @@ function getComputerChoice(){
  const computerSelection = getComputerChoice();
 
  console.log(playRound(playerSelection ,computerSelection));
+ }
