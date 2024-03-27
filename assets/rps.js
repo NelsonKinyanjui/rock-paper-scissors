@@ -68,3 +68,5 @@ function getComputerChoice(){
 
  console.log(playRound(playerSelection ,computerSelection));
  }
+// add a loop that iterates 5 times
+ 
