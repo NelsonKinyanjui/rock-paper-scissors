@@ -16,6 +16,11 @@ function getComputerChoice(){
 
 }
  
+let score = {
+    wins : 0,
+    losses : 0,
+    ties : 0
+}
 
  function playGame(){
     function playRound (playerSelection , computerSelection){
@@ -59,6 +64,19 @@ function getComputerChoice(){
                 result = 'You tie.'
             }
         }
+
+        if(result === 'You win.'){
+            wins += 1;
+        }
+       else if(result === 'You lose.'){
+        losses += 1;
+        }
+        else if(result === 'You tie.'){
+            ties += 1;
+    
+        }
+    
+         
   
 
     return `${result} ,you picked ${playerSelection} ,computer picked ${computerSelection}.`
@@ -70,12 +88,14 @@ function getComputerChoice(){
  }
 // add a loop that iterates 5 times
 
-const score = {
-    wins : 0,
-    losses : 0,
-    ties : 0
-}
+
+
+
  for(i = 1; i < 5; i++){
+    
     playGame();
+
+   
+    
 
  }
