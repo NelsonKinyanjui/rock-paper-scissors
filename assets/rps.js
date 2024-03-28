@@ -69,4 +69,13 @@ function getComputerChoice(){
  console.log(playRound(playerSelection ,computerSelection));
  }
 // add a loop that iterates 5 times
- 
+
+const score = {
+    wins : 0,
+    losses : 0,
+    ties : 0
+}
+ for(i = 1; i < 5; i++){
+    playGame();
+
+ }
